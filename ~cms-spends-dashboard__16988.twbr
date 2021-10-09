@@ -380,6 +380,38 @@
       </table>
       <simple-id uuid='{92E5035A-C53F-42B8-99F4-D1ACFE4BD6C7}' />
     </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='agg_df' name='federated.1ezs2e90gf0ssn1dzfvb70w62bw0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ezs2e90gf0ssn1dzfvb70w62bw0'>
+            <column caption='Tot Benes' datatype='integer' name='[Tot_Benes]' role='measure' type='quantitative' />
+            <column-instance column='[Tot_Benes]' derivation='Sum' name='[sum:Tot_Benes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <reference-line axis-column='[federated.1ezs2e90gf0ssn1dzfvb70w62bw0].[sum:Tot_Benes:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1ezs2e90gf0ssn1dzfvb70w62bw0].[sum:Tot_Benes:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ezs2e90gf0ssn1dzfvb70w62bw0].[sum:Tot_Benes:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{2B27654E-3322-4108-BC53-01FAE05D5DA4}' />
+    </worksheet>
   </worksheets>
   <dashboards>
     <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
@@ -407,8 +439,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98044' id='13' param='vert' type-v2='layout-flow' w='99002' x='499' y='978' />
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98044' id='19' param='vert' type-v2='layout-flow' w='99002' x='499' y='978' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -423,7 +455,7 @@
     </dashboard>
   </dashboards>
   <windows saved-dpi-scale-factor='1.5' source-height='44'>
-    <window class='worksheet' maximized='true' name='Clustering graph'>
+    <window class='worksheet' name='Clustering graph'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -507,6 +539,29 @@
       <viewpoints />
       <active id='-1' />
       <simple-id uuid='{0FDC4F8B-9BD2-4280-A76A-D815C76B54D7}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{063EAADC-195C-4648-8F6C-FEFFCB985401}' />
     </window>
   </windows>
 </workbook>
